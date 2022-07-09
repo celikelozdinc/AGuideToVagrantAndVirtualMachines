@@ -1,0 +1,10 @@
+# Vagrant configuration version
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/alpine37"
+  config.vm.hostname = "alpine1.celikel.com"
+  config.vm.provision "shell", path: "provision.sh"
+  config.vm.provider "virtualbox" do |oraclevb|
+    oraclevb.memory = "6192"
+    oraclevb.cpus = "6"
+  end
+end
