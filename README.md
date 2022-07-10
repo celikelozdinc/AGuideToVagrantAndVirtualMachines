@@ -26,10 +26,18 @@ vagrant halt <id> # graceful shutdown
 vagrant destroy # also, removes from virtualbox
 ```
 
+![NW settings](./img/network_settings.png)
+
 ## Aliases
 + Aliases can be defined within _VAGRANT_HOME/aliases_ file
 + *VAGRANT_HOME* can be set to change the directory where Vagrant stores global state. By default, this is set to *~/.vagrant.d*
 
+## Quiz
+![global-status](./img/vagrant_global-status.png)
+![global-provision](./img/vagrant_provision.png)
+![global-ruby](./img/vagrant_ruby.png)
+![global-ssh](./img/vagrant_ssh.png)
 # References
++ [Course Material](https://www.educative.io/courses/guide-to-vagrant-virtual-machines)
 + [alias](https://www.vagrantup.com/docs/cli/aliases)
 + [provisioning](https://www.vagrantup.com/docs/provisioning/shell)

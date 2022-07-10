@@ -1,10 +1,22 @@
 # Vagrant configuration version
 Vagrant.configure("2") do |config|
-  config.vm.box = "generic/alpine37"
-  config.vm.hostname = "alpine1.celikel.com"
-  config.vm.provision "shell", path: "provision.sh"
-  config.vm.provider "virtualbox" do |oraclevb|
-    oraclevb.memory = "6192"
-    oraclevb.cpus = "6"
+  config.vm.define "alpine1" do |alpine1|
+    alpine1.vm.box = "generic/alpine37"
+    alpine1.vm.hostname = "alpine1.celikel.com"
+    alpine1.vm.network "private_network", ip: "10.17.34.41"
+    # make resources available before booting up the VM
+    # passing path to method config.vm.provision
+    alpine1.vm.provision "shell", path: "provision.sh"
+    alpine1.vm.provider "virtualbox" do |oraclevb|
+      oraclevb.memory = "6192"
+      oraclevb.cpus = "6"
+    end
   end
+
+  config.vm.define "alpine2" do |alpine2|
+    alpine2.vm.box = "generic/alpine37"
+    alpine2.vm.hostname = "alpine2.celikel.com"
+    alpine2.vm.network "private_network", ip: "10.17.34.34"
+  end
+
 end
