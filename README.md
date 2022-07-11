@@ -1,3 +1,22 @@
+# Virtualization
+Creation of virtual copy of your hardware resources, which can be done using any `virtualization` software.
+## O/S Virtualization
+Enables hardware to simultaneously run multiple copies of OSes on the same hardware.
+
+Hypervisors = VMM (Virtual Machine Manager) = Software that enables virtualization
+
+`TYPE1` Hypervisors : Directly runs on the hardware, act as the OS for the physical machine
+(bare-metal hypervisor, server-side virtualization)
+`TYPE2` Hypervisors : On top of existing OS (client-server virtualization)
+# Vagrant
++ Works with any virtualization engine (libvirt, VMware, Virtualbox)
++ You need to have **one of these virtualization engines** for Vagrant to run a virtual O/S
++ There's a large community that is pushing their ready-to-go images onto `Vagrant Cloud`
++ Vagrantfile &rarr; Ruby language
+
+---
+---
+
 # Install Hypervisor and Vagrant
 ```
 sudo apt apdate
